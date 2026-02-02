@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5001;
 const __dirname = path.resolve(); // để lấy đường dẫn tuyệt đối
 const app = express(); // ✅ tạo app trước
 app.use(express.json()); // ✅ middleware parse JSON
-if (process.env.NODE_ENV !== "development") {
+if (process.env.NODE_ENV !== "production") {
   app.use(cors({ origin: "http://localhost:5173" })); // cho phép CORS
 }
 
